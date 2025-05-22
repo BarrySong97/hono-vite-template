@@ -1,7 +1,7 @@
 import { serve } from "@hono/node-server";
 import { Hono } from "hono";
 import { pinoLogger } from "hono-pino";
-import { printLogo, printVersion } from "../utils/logger";
+import { printVersion } from "./utils/logger";
 import "dotenv/config";
 
 const app = new Hono();

@@ -1,5 +1,5 @@
 import type { ViteDevServer } from "vite";
-import { printLogo } from "../utils/logger";
+import { printLogo } from "../app/utils/logger";
 
 export function LogPrintPlugin() {
   return {

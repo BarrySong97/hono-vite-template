@@ -1,6 +1,5 @@
 ![image](https://github.com/user-attachments/assets/59b1532b-25d2-4444-bfe2-29dda96e441b)
 
-
 This project is a backend application built with [Hono](https://hono.dev/) and [Vite](https://vitejs.dev/).
 
 ## Features
@@ -100,25 +99,3 @@ To build and run the application using Docker, follow these steps:
     ```
 
     This command runs the container in detached mode (`-d`), maps port 3000 of the host to port 3000 of the container (`-p 3000:3000`), and names the container `hono-server` for easier management.
-
-    **Environment Variables:**
-
-    If your application requires environment variables, you can pass them to the `docker run` command using the `-e` flag or an environment file (`--env-file`). For example:
-
-    ```bash
-    docker run -d -p 3000:3000 -e PORT=3000 -e ANOTHER_VARIABLE=your_value --name onedrive-hook-app onedrive-hook-update
-    ```
-
-    Or, using an environment file (e.g., `.env.docker`):
-
-    ```bash
-    # .env.docker
-    PORT=3000
-    ANOTHER_VARIABLE=your_value
-    ```
-
-    Then run:
-
-    ```bash
-    docker run -d -p 3000:3000 --env-file ./.env.docker --name onedrive-hook-app onedrive-hook-update
-    ```

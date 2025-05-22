@@ -18,7 +18,7 @@ WORKDIR /app
 COPY --from=dependencies /app/node_modules /app/node_modules
 # Copy source code and necessary configuration files
 COPY package.json tsconfig.json ./
-COPY src ./src/
+COPY . .
 # Build the application
 RUN pnpm run build
 # Remove devDependencies after build

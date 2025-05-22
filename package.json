@@ -1,5 +1,5 @@
 {
-  "name": "onedrive-hook-update",
+  "name": "hono-vite-template",
   "type": "module",
   "scripts": {
     "dev": "vite",
