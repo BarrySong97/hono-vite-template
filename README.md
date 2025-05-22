@@ -22,7 +22,7 @@ This project is a backend application built with [Hono](https://hono.dev/) and [
 
     ```bash
     git clone <your-repository-url>
-    cd onedrive-hook-update
+    cd <folder-name>
     ```
 
 2.  Install dependencies:
