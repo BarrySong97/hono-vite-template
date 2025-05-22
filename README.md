@@ -81,3 +81,43 @@ node ./dist/index.cjs
 ```
 
 Make sure you have configured any necessary environment variables for your production environment.
+
+## Running with Docker
+
+To build and run the application using Docker, follow these steps:
+
+1.  **Build the Docker image:**
+
+    ```bash
+    docker build -t hono-server .
+    ```
+
+2.  **Run the Docker container:**
+
+    ```bash
+    docker run -d -p 3000:3000 --name hono-server hono-server
+    ```
+
+    This command runs the container in detached mode (`-d`), maps port 3000 of the host to port 3000 of the container (`-p 3000:3000`), and names the container `hono-server` for easier management.
+
+    **Environment Variables:**
+
+    If your application requires environment variables, you can pass them to the `docker run` command using the `-e` flag or an environment file (`--env-file`). For example:
+
+    ```bash
+    docker run -d -p 3000:3000 -e PORT=3000 -e ANOTHER_VARIABLE=your_value --name onedrive-hook-app onedrive-hook-update
+    ```
+
+    Or, using an environment file (e.g., `.env.docker`):
+
+    ```bash
+    # .env.docker
+    PORT=3000
+    ANOTHER_VARIABLE=your_value
+    ```
+
+    Then run:
+
+    ```bash
+    docker run -d -p 3000:3000 --env-file ./.env.docker --name onedrive-hook-app onedrive-hook-update
+    ```

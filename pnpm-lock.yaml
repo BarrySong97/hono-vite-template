@@ -17,6 +17,9 @@ importers:
       '@microsoft/microsoft-graph-client':
         specifier: ^3.0.7
         version: 3.0.7
+      asciiart-logo:
+        specifier: ^0.2.7
+        version: 0.2.7
       chalk:
         specifier: ^5.4.1
         version: 5.4.1
@@ -35,22 +38,13 @@ importers:
       pino:
         specifier: ^9.6.0
         version: 9.6.0
-    devDependencies:
-      '@hono/vite-build':
-        specifier: ^1.6.0
-        version: 1.6.0(hono@4.7.6)
-      '@hono/vite-dev-server':
-        specifier: ^0.19.0
-        version: 0.19.0(hono@4.7.6)
-      '@types/node':
-        specifier: ^20.11.17
-        version: 20.17.30
-      asciiart-logo:
-        specifier: ^0.2.7
-        version: 0.2.7
       pino-pretty:
         specifier: ^13.0.0
         version: 13.0.0
+    devDependencies:
+      '@types/node':
+        specifier: ^20.11.17
+        version: 20.17.30
       tsx:
         specifier: ^4.7.1
         version: 4.19.3
@@ -231,25 +225,6 @@ packages:
     peerDependencies:
       hono: ^4
 
-  '@hono/vite-build@1.6.0':
-    resolution: {integrity: sha512-7YJHgOVb4MnlTGI4anWTneJqRJ+h7xar6m4iz7Bnjf+QEdR6T6p5M8feqbwyQ89K1jFnGOshBVKdbUw1fPwbew==}
-    engines: {node: '>=18.14.1'}
-    peerDependencies:
-      hono: '*'
-
-  '@hono/vite-dev-server@0.19.0':
-    resolution: {integrity: sha512-myMc4Nm0nFQSPaeE6I/a1ODyDR5KpQ4EHodX4Tu/7qlB31GfUemhUH/WsO91HJjDEpRRpsT4Zbg+PleMlpTljw==}
-    engines: {node: '>=18.14.1'}
-    peerDependencies:
-      hono: '*'
-      miniflare: '*'
-      wrangler: '*'
-    peerDependenciesMeta:
-      miniflare:
-        optional: true
-      wrangler:
-        optional: true
-
   '@microsoft/microsoft-graph-client@3.0.7':
     resolution: {integrity: sha512-/AazAV/F+HK4LIywF9C+NYHcJo038zEnWkteilcxC1FM/uK/4NVGDKGrxx7nNq1ybspAroRKT4I1FHfxQzxkUw==}
     engines: {node: '>=12.0.0'}
@@ -392,12 +367,6 @@ packages:
   atomic-sleep@1.0.0:
     resolution: {integrity: sha512-kNOjDqAh7px0XWNI+4QbzoiR/nTkHAWNud2uvnJquD1/x5a7EQZMJT0AczqK0Qn67oY/TTQ1LbUKajZpp3I9tQ==}
     engines: {node: '>=8.0.0'}
-
-  balanced-match@1.0.2:
-    resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
-
-  brace-expansion@2.0.1:
-    resolution: {integrity: sha512-XnAIvQ8eM+kC6aULx6wuQiwVsnzsi9d3WxzV3FpWTGA19F621kwdbsAcFKXgKUHZWsy+mY6iL1sHTxWEFCytDA==}
 
   buffer-equal-constant-time@1.0.1:
     resolution: {integrity: sha512-zRpUiDwd/xk6ADqPMATG8vc9VPrkck7T07OIx0gnjmJAnHnTVXNQG3vfvWNuiZIkwu9KrKdA1iJKfsfTVxE6NA==}
@@ -552,10 +521,6 @@ packages:
 
   lodash.once@4.1.1:
     resolution: {integrity: sha512-Sb487aTOCr9drQVL8pIxOzVhafOjZN9UU54hiN8PU3uAiSV7lx1yYNpbNmex2PK6dSJoNTSJUUswT651yww3Mg==}
-
-  minimatch@9.0.5:
-    resolution: {integrity: sha512-G6T0ZX48xgozx7587koeX9Ys2NYy6Gmv//P89sEte9V9whIapMNF4idKxnW2QtCcLiTWlb/wfCabAtAFWhhBow==}
-    engines: {node: '>=16 || 14 >=14.17'}
 
   minimist@1.2.8:
     resolution: {integrity: sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA==}
@@ -864,16 +829,6 @@ snapshots:
     dependencies:
       hono: 4.7.6
 
-  '@hono/vite-build@1.6.0(hono@4.7.6)':
-    dependencies:
-      hono: 4.7.6
-
-  '@hono/vite-dev-server@0.19.0(hono@4.7.6)':
-    dependencies:
-      '@hono/node-server': 1.14.1(hono@4.7.6)
-      hono: 4.7.6
-      minimatch: 9.0.5
-
   '@microsoft/microsoft-graph-client@3.0.7':
     dependencies:
       '@babel/runtime': 7.27.0
@@ -965,12 +920,6 @@ snapshots:
       to-title-case: 1.0.0
 
   atomic-sleep@1.0.0: {}
-
-  balanced-match@1.0.2: {}
-
-  brace-expansion@2.0.1:
-    dependencies:
-      balanced-match: 1.0.2
 
   buffer-equal-constant-time@1.0.1: {}
 
@@ -1128,10 +1077,6 @@ snapshots:
   lodash.isstring@4.0.1: {}
 
   lodash.once@4.1.1: {}
-
-  minimatch@9.0.5:
-    dependencies:
-      brace-expansion: 2.0.1
 
   minimist@1.2.8: {}
 

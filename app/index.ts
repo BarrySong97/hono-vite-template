@@ -20,7 +20,7 @@ app.use(
   })
 );
 app.get("/", (c) => {
-  return c.text(`Hello world22222222!${process.env.test}`);
+  return c.text(`Hello world!`);
 });
 if (import.meta.env.PROD) {
   serve(app, () => {
